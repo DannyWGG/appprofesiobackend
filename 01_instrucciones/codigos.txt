@@ -1,0 +1,20 @@
+# Elimina todos los archivos de migraciones (excepto __init__.py)
+find tu_app/migrations/ -type f -not -name '__init__.py' -delete
+
+Borra sus migraciones (solo las de la app modificada):
+
+bash
+rm tu_app/migrations/*.py
+
+elimina todas las carpetas llamadas "__pycache__"
+find . -type d -name "__pycache__" -exec rm -rf {} \;
+
+
+
+find . - busca en el directorio actual y subdirectorios
+
+-type d - solo busca directorios
+
+-name "__pycache__" - busca solo directorios con este nombre exacto
+
+-exec rm -rf {} \; - ejecuta rm -rf en cada directorio encontrado (elimina recursivamente todo su contenido)

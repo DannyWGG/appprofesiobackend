@@ -1,0 +1,18 @@
+[Unit]
+Description=Demonio de la API Contactanos
+Requires=contactanos.socket
+After=network.target
+
+[Service]
+User=udesarrollo
+Group=udesarrollo
+WorkingDirectory=/var/www/html/contactanos
+ExecStart=/var/www/html/contactanos/.venv/bin/gunicorn \
+        --access-logfile - \
+          -k uvicorn.workers.UvicornWorker \
+          --workers 3 \
+          --bind unix:/run/contactanos.sock \
+          configuracion.asgi:application
+
+[Install]
+WantedBy=multi-user.target

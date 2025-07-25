@@ -1,0 +1,8 @@
+[Unit]
+Description=Socket de la API Contactanos
+
+[Socket]
+ListenStream=/run/contactanos.sock
+
+[Install]
+WantedBy=sockets.target
