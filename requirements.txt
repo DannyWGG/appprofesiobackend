@@ -3,11 +3,11 @@ annotated-types==0.7.0
 asgiref==3.8.1
 billiard==4.2.0
 celery==5.4.0
-cffi==1.16.0
-click==8.1.7
-click-didyoumean==0.3.1
-click-plugins==1.1.1
-click-repl==0.3.0
+cffi
+click
+click-didyoumean
+click-plugins
+click-repl
 colorama==0.4.6
 contextlib2==21.6.0
 cryptography==41.0.7
