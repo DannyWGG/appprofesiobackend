@@ -27,7 +27,6 @@ et_xmlfile
 gunicorn
 h11
 idna
-import-export
 injector
 kombu
 ninja-schema
